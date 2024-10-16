@@ -1,0 +1,13 @@
+*****************************************************************
+* INFINEON technologies                                         *
+* RF & Discrete Semiconductors                                  *
+* SPICE2G6 Model for Varactor Diode BBY53....(Chip only)        *
+*                                                               *
+* Version:  2                                                   *
+* Date:     September 2001                                      *
+*****************************************************************
+.model D353 D(IS=0.6f N=1.065 RS=200.0m XTI=3.0 EG=1.16
++ CJO=8.65p M=0.838 VJ=1.025 FC=0.5 TT=290.0n BV=16.5 IBV=10.0n)
+*010.09.2001 INFINEON TECHNOLOGIES  Moschovis
+*****************************************************************
+

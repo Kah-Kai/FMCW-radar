@@ -1,0 +1,40 @@
+****************************************************************
+* INFINEON TECHNOLOGIES
+* RF-PACKAGE EQUIVALENT CIRCUIT
+* VALID UP TO 6 GHZ
+* >>> SOD323 <<< (RF-DIODE-PACKAGE)
+* FILENAME: SOD323.TXT
+* Extracted on behalf of INFINEON TECHNOLOGIES by
+* Institut fuer Mobil- und Satellitenfunktechnik (IMST)
+* (C) 2001 INFINEON TECHNOLOGIES
+* Version 1.1             June 2001               J. P. Schaffer
+****************************************************************
+*
+*                           CAC
+*             (10)          | |          (20)
+*              +------------| |------------+
+*              |            | |            |
+*         LAO  |                           |  LCO
+*     A---LLL--+                           +--LLL---C
+*   (100)      |                           |      (200)
+*              |  LAI                      |
+*              +--LLL---A' CHIP  C'--------+
+*                      (1)      (2)
+*
+.subckt BBY53 100 200
+LAI    1   10   0.55nH       ; LAI
+CAC   10   2   110fF        ; CAC
+LAD   10   100  0.67nH       ; LAO
+LCO   2   200  0.55nH       ; LCO
+DX    1    2  D353
+.model D353 D(IS=0.6f N=1.065 RS=200.0m XTI=3.0 EG=1.16
++ CJO=8.65p M=0.838 VJ=1.025 FC=0.5 TT=290.0n BV=16.5 IBV=10.0n)
+.ends BBY53
+*******************************************************
+****************************************************************
+
+* 200  = CATHODE OF COMPLETE DIODE IN PACKAGE
+*
+* Add Spice model or discrete equivalent circuit for chip
+* between terminals (1) and (2)
+****************************************************************
